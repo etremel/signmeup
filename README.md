@@ -7,6 +7,8 @@ SignMeUp is a web application that allows teaching assistants to hold hours and 
 
 SMU is built with Meteor, and uses MongoDB as a data store and Semantic UI for CSS.
 
+This repository is a fork of [the main SignMeUp repository](https://github.com/signmeup/signmeup) for the purpose of changing its configuration and settings to work smoothly at Cornell.
+
 ## Contributing
 
 Contributions are welcome from one and all. Please read [CONTRIBUTING.md](CONTRIBUTING.md) to get set up. For questions, please email signmeup-dev@lists.cs.brown.edu.

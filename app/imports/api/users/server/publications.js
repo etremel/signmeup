@@ -8,7 +8,7 @@ Meteor.publish('users.self', function self() {
   }, {
     fields: {
       email: true,
-      saml: true, // Adding this anticipating that we'll start storing data in `saml`
+      saml: true, 
     },
   });
 });

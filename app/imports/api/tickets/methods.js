@@ -44,10 +44,10 @@ export const createTicket = new ValidatedMethod({
 
     // Gather student ids
     const studentIds = studentEmails.map((email) => {
-      // Check: all emails end with @brown.edu or @signmeup.cs.brown.edu
-      if (!(email.endsWith('@brown.edu') || email.endsWith('@signmeup.cs.brown.edu'))) {
+      // Check: all emails end with @cornell.edu or @signmeup.cs.cornell.edu
+      if (!(email.endsWith('@cornell.edu') || email.endsWith('@signmeup.cs.cornell.edu'))) {
         throw new Meteor.Error('tickets.createTicket.NonBrownEmail',
-          `Email ${email} does not end with @brown.edu`);
+          `Email ${email} does not end with @cornell.edu`);
       }
 
       const student = findUserByEmail(email);

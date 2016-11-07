@@ -5,7 +5,7 @@ import { Courses } from '/imports/api/courses/courses.js';
 
 Meteor.users.helpers({
   isSamlUser() {
-    return this.profile && this.profile.brownUUID;
+    return this.profile && this.profile.cornellNetID;
   },
 
   fullName() {
@@ -32,8 +32,8 @@ Meteor.users.helpers({
       return this.email;
     } else if (this.emails) {
       return this.emails[0].address;
-    } else if (this.profile.email) {
-      return this.profile.email;
+    } else if (this.profile.cornellMail) {
+      return this.profile.cornellMail;
     }
 
     return null;

@@ -34,7 +34,7 @@ Template.Nav.events({
     const isSamlUser = Meteor.user().isSamlUser();
     Meteor.logout((err) => {
       if (!err && isSamlUser) {
-        window.location = 'https://sso.brown.edu/idp/shib_logout.jsp';
+        alert("Cornell SSO does not support logout. Please close your browser to complete the logout process.");
       }
     });
   },

@@ -35,8 +35,8 @@ Template.ModalJoinQueue.onCreated(function onCreated() {
       return;
     }
 
-    if (!(email.endsWith('@brown.edu') || email.endsWith('@signmeup.cs.brown.edu'))) {
-      this.errors.set('student', 'Email must end with @brown.edu.');
+    if (!(email.endsWith('@cornell.edu') || email.endsWith('@signmeup.cs.cornell.edu'))) {
+      this.errors.set('student', 'Email must end with @cornell.edu.');
       return;
     }
 
@@ -114,10 +114,10 @@ Template.ModalJoinQueue.helpers({
 
   studentPlaceholder() {
     if (Template.instance().studentEmails.array().length > 0) {
-      return 'another_student@brown.edu';
+      return 'another_student@cornell.edu';
     }
 
-    return 'email_address@brown.edu';
+    return 'email_address@cornell.edu';
   },
 
   showNotifications(type) {

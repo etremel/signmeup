@@ -22,11 +22,12 @@ export class Notifications {
       try {
         Email.send({
           to: ticket.notifications.email,
-          from: 'alerts@signmeup.cs.cornell.edu',
+          from: 'cs-signmeup@cornell.edu',
           subject: `[SignMeUp] You're up next for ${course.name} ${queue.name}`,
           text: 'A TA notified you about your spot. Head over to hours now.',
         });
       } catch (err) {
+        console.log("E-mail sending error: ", err);
         throw new Meteor.Error(err);
       }
     } else {
@@ -52,7 +53,7 @@ export class Notifications {
       try {
         Email.send({
           to: `${ticket.notifications.phone.number}@${ticket.notifications.phone.carrier}`,
-          from: 'alerts@signmeup.cs.cornell.edu',
+          from: 'cs-signmeup@cornell.edu',
           subject: `${course.name} ${queue.name}`,
           text: 'A TA notified you about your spot. Head over to hours now.',
         });

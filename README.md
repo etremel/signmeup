@@ -11,7 +11,7 @@ This repository is a fork of [the main SignMeUp repository](https://github.com/s
 
 ## Contributing
 
-Contributions are welcome from one and all. Please read [CONTRIBUTING.md](CONTRIBUTING.md) to get set up. For questions, please email signmeup-dev@lists.cs.brown.edu.
+Contributions are welcome from one and all. Please read [CONTRIBUTING.md](CONTRIBUTING.md) to get set up. For questions related to core SignMeUp features, please email signmeup-dev@lists.cs.brown.edu. For questions related to the Cornell localization of SignMeUp, contact Edward (@etremel).
 
 ## Credits
 

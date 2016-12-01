@@ -7,8 +7,9 @@ import { Meteor } from 'meteor/meteor';
 Meteor.users.publicFields = {
   email: true,
   'emails.address': true,
-  saml: true, // Adding this anticipating that we'll start storing data in `saml`
+  saml: true, 
   'profile.name': true,
+  'profile.commonName': true,
   'profile.displayName': true,
   'profile.givenName': true,
   roles: true,

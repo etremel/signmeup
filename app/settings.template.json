@@ -1,71 +1,56 @@
 {
   "users": [{
     "name": "Admin Test",
-    "email": "admin@signmeup.cs.brown.edu",
+    "email": "admin@signmeup.cs.cornell.edu",
     "password": "INSERT-PASSWORD-HERE",
-    "type": "admin"
-  }, {
-    "email": "athyuttam_eleti@brown.edu",
-    "saml": true,
     "type": "admin"
   }, {
     "name": "MTA Test",
-    "email": "mta@signmeup.cs.brown.edu",
+    "email": "mta@signmeup.cs.cornell.edu",
     "password": "INSERT-PASSWORD-HERE",
     "type": "mta"
   }, {
-    "email": "emma_herold@brown.edu",
-    "saml": true,
-    "type": "mta"
-  }, {
-    "email": "marley_rafson@brown.edu",
-    "saml": true,
-    "type": "mta"
-  }, {
     "name": "HTA Test",
-    "email": "hta@signmeup.cs.brown.edu",
+    "email": "hta@signmeup.cs.cornell.edu",
     "password": "INSERT-PASSWORD-HERE",
     "type": "hta"
   }, {
     "name": "TA Test",
-    "email": "ta@signmeup.cs.brown.edu",
+    "email": "ta@signmeup.cs.cornell.edu",
     "password": "INSERT-PASSWORD-HERE",
     "type": "ta"
   }, {
     "name": "Student Test",
-    "email": "student@signmeup.cs.brown.edu",
+    "email": "student@signmeup.cs.cornell.edu",
     "password": "INSERT-PASSWORD-HERE",
     "type": "student"
   }],
 
   "saml": {
-    "loginUrl": "/login",
-    "protocol": "https",
-    "host": "local.cis-dev.brown.edu:3000",
-    "path": "/login/callback",
-    "entryPoint": "https://sso.brown.edu/idp/profile/SAML2/Redirect/SSO",
-    "issuer": "https://local.cis-dev.brown.edu/shibboleth-sp",
-    "cert": "INSERT-IDP-CERT-HERE",
-    "serviceProviderCert": "INSERT-SELF-SIGNED-CERT-HERE",
-    "decryptionPvk": "INSERT-SELF-SIGNED-KEY-HERE",
-    "identifierFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
-    "disableRequestedAuthnContext": true,
-    "metadataUrl": "/metadata",
-    "attributeMap": {
-      "urn:oid:1.3.6.1.4.1.6537.1.68": "brownAdvanceId",
-      "https://www.brown.edu/shibboleth/attributes/brownAuthenticationProfiles": "brownAuthenticationProfiles",
-      "urn:oid:1.3.6.1.4.1.6537.1.16": "brownBannerID",
-      "urn:oid:1.3.6.1.4.1.6537.1.13": "brownBruID",
-      "urn:oid:1.3.6.1.4.1.6537.1.14": "brownNetID",
-      "urn:oid:1.3.6.1.4.1.6537.1.15": "brownShortID",
-      "urn:oid:1.3.6.1.4.1.6537.1.25": "brownStatus",
-      "urn:oid:1.3.6.1.4.1.6537.1.28": "brownType",
-      "urn:oid:1.3.6.1.4.1.6537.1.19": "brownUUID",
-      "urn:oid:1.3.6.1.4.1.5923.1.1.1.7": "eduPersonEntitlement",
-      "urn:oid:1.3.6.1.4.1.5923.1.1.1.9": "eduPersonScopedAffiliation",
-      "urn:oid:1.3.6.1.4.1.5923.1.5.1.1": "isMemberOf",
-      "urn:oid:1.3.6.1.4.1.6537.1.63": "machineID"
-    }
+	  "loginUrl": "/login",
+	  "protocol": "https",
+	  "host": "signmeup.cs.cornell.edu",
+	  "path": "/login/callback/",
+	  "entryPoint": "https://shibidp.cit.cornell.edu/idp/profile/SAML2/Redirect/SSO",
+	  "issuer": "https://signmeup.cs.cornell.edu/",
+	  "cert": "MIIDSDCCAjCgAwIBAgIVAOZ8NfBem6sHcI7F39sYmD/JG4YDMA0GCSqGSIb3DQEBBQUAMCIxIDAeBgNVBAMTF3NoaWJpZHAuY2l0LmNvcm5lbGwuZWR1MB4XDTA5MTEyMzE4NTI0NFoXDTI5MTEyMzE4NTI0NFowIjEgMB4GA1UEAxMXc2hpYmlkcC5jaXQuY29ybmVsbC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCTURo990uuODo/5ju3GZThcT67K3RXW69jwlBwfn3png75Dhyw9Xa50RFv0EbdfrojH1P19LyfCjubfsm9Z7FYkVWSVdPSvQ0BXx7zQxdTpE9137qj740tMJr7Wi+iWdkyBQS/bCNhuLHeNQor6NXZoBgX8HvLy4sCUb/4v7vbp90HkmP3FzJRDevzgr6PVNqWwNqptZ0vQHSF5D3iBNbxq3csfRGQQyVi729XuWMSqEjPhhkf1UjVcJ3/cG8tWbRKw+W+OIm71k+99kOgg7IvygndzzaGDVhDFMyiGZ4njMzEJT67sEq0pMuuwLMlLE/86mSvuGwO2Qacb1ckzjodAgMBAAGjdTBzMFIGA1UdEQRLMEmCF3NoaWJpZHAuY2l0LmNvcm5lbGwuZWR1hi5odHRwczovL3NoaWJpZHAuY2l0LmNvcm5lbGwuZWR1L2lkcC9zaGliYm9sZXRoMB0GA1UdDgQWBBSQgitoP2/rJMDepS1sFgM35xw19zANBgkqhkiG9w0BAQUFAAOCAQEAaFrLOGqMsbX1YlseO+SM3JKfgfjBBL5TP86qqiCuq9a1J6B7Yv+XYLmZBy04EfV0L7HjYX5aGIWLDtz9YAis4g3xTPWe1/bjdltUq5seRuksJjybprGI2oAv/ShPBOyrkadectHzvu5K6CL7AxNTWCSXswtfdsuxcKo65tO5TRO1hWlr7Pq2F+Oj2hOvcwC0vOOjlYNe9yRE9DjJAzv4rrZUg71R3IEKNjfOF80LYPAFD2Spp36uB6TmSYl1nBmS5LgWF4EpEuODPSmy4sIV6jl1otuyI/An2dOcNqcgu7tYEXLXC8N6DXggDWPtPRdpk96UW45huvXudpZenrcd7A==", 
+	  "serviceProviderCert" : "MIIDFzCCAf+gAwIBAgIJAKYZSgV9YoEqMA0GCSqGSIb3DQEBCwUAMCIxIDAeBgNVBAMMF3NpZ25tZXVwLmNzLmNvcm5lbGwuZWR1MB4XDTE2MTExNjIxMTM0MFoXDTI2MTExNDIxMTM0MFowIjEgMB4GA1UEAwwXc2lnbm1ldXAuY3MuY29ybmVsbC5lZHUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDF5hVENY0IlvSnmCsYvN6Xkj9l5KbQDeHMDC3W98e1cHd1G4H2+QEudvcgi37z1FHPQSwZwt8wNIqabZSPt1tLfc80dPTnD98qrllLPrEank0ikQIH0Q9RBg9gUI7+ojvxPz9eM+PhrRu12/xOrExFxhWPkikD9jGkzIwTJZhRaEeMnAZYDtHKWDCTx3Up6+ZpST8XHI+RjVTkUO4+FUv7U68WtxF8QyYKuOu+G9WUc47G4jqRrMxjV8IrZqMiE/zklfAWzWeSM/7GXLOQd554AHB2XBGWYuofVQKqKGG3snZiAGID3S2tw9VdHd3yHD3eETztyWBuW525S2QM2UlPAgMBAAGjUDBOMB0GA1UdDgQWBBTTH8j9RmVUCd++1gn5JeC2GEzAeTAfBgNVHSMEGDAWgBTTH8j9RmVUCd++1gn5JeC2GEzAeTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQC+xpNpq5Pcnu0jVLIqi4VYbWn0nRACapwDCXxuV5eaJRaE6nddGH6TdyaKSQwZityhvzRqqQ6bFUwM6zr1wBTT/lv4HOyifFHUdOtD+v2X2QfcxIug1iMutnjFcdyVY6uGsCqfLAmA3qQk2qN9OsWl7X6rf+HAkEmI03HNEDGDDzTcmQXr/+dCENxA3sbnoh+gTsYKre5K4aSHyi+IVBsxKErvVC3RtVyedTtIA5zoH1QPrJpXBAIiug0mAQnTKR1Jfz6RDv1eoxNaaQY9hqTcEORc8ga9MJtTzn/27xWSsBqHsRvPU2L2gtSPCHjkQoceD0kcdoCzgwiDfgXPKyKx",
+	  "decryptionPvk": "INSERT-PRIVATE-KEY-HERE",
+	  "metadataUrl": "/metadata",
+	  "attributeMap": {
+		  "urn:oid:2.5.4.3" : "commonName",
+		  "urn:oid:2.5.4.42" : "givenName",
+		  "urn:oid:2.5.4.4" : "surname",
+		  "urn:oid:2.16.840.1.113730.3.1.241" : "displayName",
+		  "urn:oid:0.9.2342.19200300.100.1.1" : "cornellNetID",
+		  "urn:oid:0.9.2342.19200300.100.1.3" : "cornellMail",
+		  "urn:oid:1.3.6.1.4.1.5923.1.1.1.1" : "eduPersonAffiliation",
+		  "urn:oid:1.3.6.1.4.1.5923.1.1.1.5" : "eduPersonPrimaryAffiliation",
+		  "urn:oid:1.3.6.1.4.1.5923.1.1.1.9" : "eduPersonScopedAffiliation",
+		  "urn:oid:1.3.6.1.4.1.5923.1.1.1.7": "eduPersonEntitlement",
+		  "urn:oid:1.3.6.1.4.1.5923.1.1.1.3": "eduPersonOrgDN",
+		  "urn:oid:1.3.6.1.4.1.5923.1.1.1.6": "eduPersonPrincipalName"
+	  }
   },
 
   "kadira": {

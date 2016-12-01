@@ -4,11 +4,11 @@ app:
   restart: always
   environment:
    - VERSION=${VERSION}
-   - ROOT_URL=https://signmeup.cs.brown.edu
+   - ROOT_URL=https://signmeup.cs.cornell.edu
    - MONGO_URL=mongodb://db:27017/signmeup
-   - VIRTUAL_HOST=signmeup.cs.brown.edu
+   - VIRTUAL_HOST=signmeup.cs.cornell.edu
    - METEOR_SETTINGS=${METEOR_SETTINGS}
-   - MAIL_URL=smtp://mx.cs.brown.edu:25
+   - MAIL_URL=smtp://en-cs-signmeup%40cornell.edu:PASSWORD@exchange.cornell.edu:587
    - HTTP_FORWARDED_COUNT=1
    - PRODUCTION=true
 

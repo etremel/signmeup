@@ -5,9 +5,9 @@ app:
   volumes:
    - ./app:/app # Relative to Compose file
   environment:
-   - ROOT_URL=https://local.cis-dev.brown.edu:3000
+   - ROOT_URL=https://signmeup.cs.cornell.edu:3000
    - MONGO_URL=mongodb://db:27017/signmeup
-   - VIRTUAL_HOST=local.cis-dev.brown.edu
+   - VIRTUAL_HOST=signmeup.cs.cornell.edu
    - ARGS=--settings settings.json --port 80 # Relative to project directory
    - HTTP_FORWARDED_COUNT=1
 
